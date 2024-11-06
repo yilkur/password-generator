@@ -32,7 +32,7 @@ body {
 }
 
 main {
-  max-width: 580px;
+  max-width: 640px;
   margin: 3rem auto;
   padding: 3rem 4rem;
   background: #1f2937;
@@ -82,7 +82,7 @@ hr {
 
 .passwords {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
 }
 
