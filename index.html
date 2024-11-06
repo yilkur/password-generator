@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Password Generator</title>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+</head>
+
+<body>
+  <main>
+    <h1>Generate a <br><span class="highlight">random password</span></h1>
+    <p>Never use an insecure password again.</p>
+
+    <div class="inputs-wrapper">
+      <div>
+        <input type="checkbox" id="toggle-numbers" name="toggle-numbers" />
+        <label for="toggle-numbers">Include numbers</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="toggle-symbols" name="toggle-symbols" />
+        <label for="toggle-symbols">Include symbols</label>
+      </div>
+
+      <div>
+        <input type="number" id="password-length" name="password-length" min="6" max="16" value="6" />
+        <label for="tentacles">Password length (6-16):</label>
+      </div>
+
+    </div>
+
+    <button class="generate-passwords">
+      Generate passwords
+    </button>
+
+    <hr>
+
+    <div class="passwords">
+      <div class="password-wrapper">
+        <div class="password password-1"></div>
+
+        <div class="tooltip">
+          <button class="copy copy-pw-1" title="copy">
+            <span class="tooltiptext" id="tooltip-1">Copy to clipboard</span>
+            <i data-feather="clipboard"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="password-wrapper">
+        <div class="password password-2"></div>
+
+        <div class="tooltip">
+          <button class="copy copy-pw-2" title="copy">
+            <span class="tooltiptext" id="tooltip-2">Copy to clipboard</span>
+            <i data-feather="clipboard"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+  <script>
+    feather.replace();
+  </script>
+  <script src="index.js"></script>
+</body>
+
+</html>

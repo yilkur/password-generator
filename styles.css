@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --color-primary: #10b981;
+  --color-darkgray: #273549;
+  --border-radius-small: 4px;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+body {
+  margin: 0;
+  background: #1c1c1c;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+main {
+  max-width: 480px;
+  margin: 3rem auto;
+  padding: 2rem 4rem;
+  background: #1f2937;
+}
+
+button.generate-passwords {
+  color: white;
+  background: var(--color-primary);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--border-radius-small);
+  transition: transform 0.1s ease;
+  font-size: 16px;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+button.generate-passwords:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+button.generate-passwords:active {
+  animation: pop 0.2s forwards;
+}
+
+span.highlight {
+  color: var(--color-primary);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  line-height: 1.1;
+}
+
+p {
+  margin-top: 0;
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 0.5px solid #2f3e53;
+}
+
+.passwords {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.password-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background: var(--color-darkgray);
+  height: 20px;
+  padding: 1rem 0 1rem 1.5rem;
+  color: lawngreen;
+  border-radius: var(--border-radius-small);
+  align-items: center;
+  gap: 1rem;
+}
+
+.password {
+  font-size: 14px;
+}
+
+button.copy {
+  border-radius: var(--border-radius-small);
+  padding: 0.75rem;
+  border: 0;
+  background: transparent;
+  transition: transform 0.1s ease;
+  color: lawngreen;
+}
+
+button.copy:active {
+  animation: pop 0.2s forwards;
+}
+
+button.copy:hover {
+  cursor: pointer;
+  background-color: #2f3e53;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: var(--color-primary);
+  color: #fff;
+  text-align: center;
+  border-radius: var(--border-radius-small);
+  padding: 4px;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--color-primary) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.inputs-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type='number'] {
+  max-width: 80px;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: var(--border-radius-small);
+  font-size: 16px;
+  background: var(--color-darkgray);
+  color: white;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
